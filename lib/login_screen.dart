@@ -1,8 +1,18 @@
 import 'package:NeoSTORE/custom_flat_button.dart';
 import 'package:NeoSTORE/custom_text_field.dart';
 import 'package:flutter/material.dart';
+import 'package:NeoSTORE/register_screen.dart';
 
 class LoginScreen extends StatelessWidget {
+  void navigateToRegisterPage(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => RegisterScreen(),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final mediaQuery = MediaQuery.of(context);
@@ -22,7 +32,7 @@ class LoginScreen extends StatelessWidget {
               child: Text(
                 'NeoSTORE',
                 style: TextStyle(
-                    fontWeight: FontWeight.bold,
+                    fontWeight: FontWeight.w600,
                     fontFamily: 'Gotham',
                     fontSize: 46,
                     color: Colors.white),
@@ -83,7 +93,9 @@ class LoginScreen extends StatelessWidget {
                       color: Color(0xff8B0000),
                       alignment: Alignment.center,
                       child: FlatButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          navigateToRegisterPage(context);
+                        },
                         child: Icon(
                           Icons.add,
                           color: Colors.white,

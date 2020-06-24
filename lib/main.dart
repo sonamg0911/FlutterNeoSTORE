@@ -30,6 +30,12 @@ class MyNeoSTOREApp extends StatelessWidget {
                 fontSize: 26,
                 color: redColor,
               ),
+              headline2: TextStyle(
+                fontFamily: 'Gotham',
+                fontWeight: FontWeight.w300,
+                fontSize: 16,
+                color: Colors.white,
+              ),
             ),
       ),
       home: LoginScreen(),
